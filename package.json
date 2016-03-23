@@ -1,9 +1,10 @@
 {
-  "name": "custom-title",
-  "main": "./lib/custom-title",
+  "name": "custom-title-jolsen",
+  "main": "./lib/custom-title-jolsen",
   "version": "1.0.1",
   "description": "Set your own template for Atom's title bar.",
-  "repository": "https://github.com/postcasio/custom-title",
+  "repository": "https://github.com/jolsenmultiad/tree-view",
+  "oldrepository": "https://github.com/postcasio/custom-title",
   "license": "MIT",
   "engines": {
     "atom": ">0.136.0"
