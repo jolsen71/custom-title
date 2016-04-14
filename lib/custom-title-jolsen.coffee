@@ -3,13 +3,13 @@ _updateWindowTitle = null
 module.exports =
 	configDefaults:
 		# template: '<%= fileName %><% if (projectPath) { %> - <%= projectPath %><% } %>'
-        template: '<% if (projectName) { %> <%= projectName %> <% } %><% if (gitHead) { %> [ ⛕<%= gitHead %> ] <% } %> <%= fileName %> - <%= filePath %>'
+		template: '<% if (projectName) { %> <%= projectName %> <% } %><% if (gitHead) { %> [ ⛕<%= gitHead %> ] <% } %> <%= fileName %> - <%= filePath %>'
 
 	config:
 		template:
 			type: 'string'
 			# default: '<%= fileName %><% if (projectPath) { %> - <%= projectPath %><% } %>'
-            default: '<% if (projectName) { %> <%= projectName %> <% } %><% if (gitHead) { %> [ ⛕<%= gitHead %> ] <% } %> <%= fileName %> - <%= filePath %>'
+			default: '<% if (projectName) { %> <%= projectName %> <% } %><% if (gitHead) { %> [ ⛕<%= gitHead %> ] <% } %> <%= fileName %> - <%= filePath %>'
 
 	subscriptions: null
 	configSub: null
