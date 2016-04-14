@@ -2,12 +2,14 @@ _updateWindowTitle = null
 
 module.exports =
 	configDefaults:
-		template: '<%= fileName %><% if (projectPath) { %> - <%= projectPath %><% } %>'
+		# template: '<%= fileName %><% if (projectPath) { %> - <%= projectPath %><% } %>'
+        template: '<% if (projectName) { %> <%= projectName %> <% } %><% if (gitHead) { %> [ ⛕<%= gitHead %> ] <% } %> <%= fileName %> - <%= filePath %>'
 
 	config:
 		template:
 			type: 'string'
-			default: '<%= fileName %><% if (projectPath) { %> - <%= projectPath %><% } %>'
+			# default: '<%= fileName %><% if (projectPath) { %> - <%= projectPath %><% } %>'
+            default: '<% if (projectName) { %> <%= projectName %> <% } %><% if (gitHead) { %> [ ⛕<%= gitHead %> ] <% } %> <%= fileName %> - <%= filePath %>'
 
 	subscriptions: null
 	configSub: null
@@ -23,8 +25,8 @@ module.exports =
 
 		template = null
 
-		@configSub = atom.config.observe 'custom-title.template', ->
-			templateString = atom.config.get('custom-title.template')
+		@configSub = atom.config.observe 'custom-title-jolsen.template', ->
+			templateString = atom.config.get('custom-title-jolsen.template')
 
 			if templateString
 				try
